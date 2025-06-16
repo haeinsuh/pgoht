@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGO건강기술 - IoT 신호 데이터 처리</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <nav class="nav">
+                <div class="logo"><a href="index.html">PGO건강기술</a></div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="about.html">소개</a></li>
+                    <li>
+                        <a href="detail1.html">서비스</a>
+                        <ul class="services-dropdown">
+                            <li><a href="detail1.html">IoT 신호 데이터 처리</a></li>
+                            <li><a href="detail2.html">관세 데이터 서비스</a></li>
+                            <li><a href="detail3.html">PDF 유틸리티</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">문의하기</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="detail-hero">
+                <h1>신호 데이터를 더 똑똑하게, 더 빠르게</h1>
+            </section>
+
+            <section class="detail-content">
+                <div class="detail-section">
+                    <p>정확하고 신뢰할 수 있는 신호 해석을 위해서는 <span class="highlight-text"><strong>의미 있는 원시 데이터</strong></span>를 수집하는 것이 핵심입니다.<br>
+                    하지만 기존의 계측 시스템은 여러가지 <span class="highlight-text"><strong>한계</strong></span>가 있습니다.<br><br>
+                    측정 대상마다 정밀 계측기를 상시 설치해야 하며, 이는 매우 비용이 크고 설치 환경에 제약을 받습니다.<br>
+                    센서에서 발생하는 신호는 다양한 장비와 디바이스를 거쳐 전송되는데,<br>
+                    이 과정에서 통신 표준의 불일치, 네트워크 지연, 하드웨어 종속성 등의 문제로 인해 데이터의 <span class="highlight-text"><strong>시간정보가 왜곡</strong></span>되며<br>
+                    결과적으로 시계열 데이터의 정렬이 어렵고, 데이터 간 시간관계가 불명확해지므로<br>
+                    시스템 전체의 상태를 정밀하게 분석하거나 이상 징후를 실시간으로 탐지하는 데 큰 어려움이 따릅니다.<br>
+                    특히, 다양한 센서에서 수집된 데이터를 도착 지점 기준(timestamp)으로 처리하게 되면<br>
+                    신호가 실제로 발생한 시점(출처 기준)을 정확히 반영하지 못하게 되고<br>
+                    이로 인해 <span class="highlight-text"><strong>지연과 병목현상 문제</strong></span>가 필연적으로 발생하게 됩니다.<br><br>
+                    이러한 구조에서는 복잡한 계통 내에서 발생하는 이상 징후를 빠르고 정확하게 진단하는 것이 <span class="highlight-text"><strong>불가능</strong></span>에 가깝습니다.</p>
+                    
+                </div>
+
+                <div class="detail-section">
+                    <h2>타임스탬프를 부여한 <span class="highlight-text">정밀한 원시데이터</span></h2>
+                    <div class="solution-grid">
+                        <div class="solution-item">
+                            <div class="image-container">
+                                <img src="pic/detail-content1.png" alt="데이터 처리 구조">
+                            </div>
+                            <div class="content-container">
+                                <h3>1. 데이터 단계 구분 및 처리 구조화</h3>
+                                <p>기존의 일체형 장비(센서 + DAQ + 계측기)는 현장 판단용으로만 활용되며,<br>
+                                    데이터 저장 및 활용에 큰 제약이 있었습니다.<br>
+                                    하지만 처리 단계를 구분하여 용이한 데이터 관리를 하게 되었습니다.</p>
+                                <ul>
+                                    <li>센서에서 발생한 신호를 수집</li>
+                                    <li>수집된 데이터를 디지털로 변환하고 저장</li>
+                                    <li>저장된 데이터를 분석, 시각화, 리포트 생성</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <div class="image-container">
+                                <img src="pic/detail-content2.png" alt="시간처리 및 샘플링">
+                            </div>
+                            <div class="content-container">
+                                <h3>2. 정밀한 시간처리 및 고속 샘플링</h3>
+                                <ul>
+                                    <li>센서 데이터에 타임스탬프(Time tag)를 부여하여 시계열 정확도를 높임</li>
+                                    <li>10µs 단위의 고속 샘플링, 1만 회/초 이상의 신호 분석</li>
+                                    <li>RMS, FFT 등의 정밀 신호 분석을 실시간으로 수행 가능화</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <div class="image-container">
+                                <img src="pic/detail-content3.png" alt="개방형 구조">
+                            </div>
+                            <div class="content-container">
+                                <h3>3. 개방형 구조 및 호환성</h3>
+                                <ul>
+                                    <li>다양한 센서, 장비와 호환 가능</li>
+                                    <li>Excel과 연동</li>
+                                    <li>웹 기반 대시보드와 연결하여 원격 모니터링 및 데이터 다운로드 가능</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <div class="customer-grid">
+                        <h2>활용 분야</h2>
+                        <p><strong>정밀 분석 |</strong> 데이터 왜곡 최소화 및 반복성 검증으로 높은 정확도 확보<br>
+                            <strong>품질 개선 |</strong> 이상 탐지 및 진단 자동화 → 공정 품질 향상<br> 
+                            <strong>비용 절감 |</strong> 고가의 계측기 없이도 정밀 데이터 확보 및 실시간 분석 가능 <br>
+                            <strong>확장성 |</strong> 스마트공장, 발전소, 방산설비, 연구소 등 다양한 산업 분야에 적용 가능</p>
+                    </div>
+                </div>
+        
+            </section>
+        </main>
+
+        <div class="button-container">
+            <button class="sample-button">샘플 보기</button>
+            <button class="contact-button">문의하기</button>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>PGO건강기술</h3>
+                    <p>건강한 삶을 위한 최고의 선택</p>
+                </div>
+                <div class="company-info">
+                    <p>경북 구미시 구미대로 350-27(경북산학융합원) 211호</p>
+                    <p>사업자등록번호 | 481-86-01838</p>
+                    <p>대표이사 | 손 기석</p>
+                    <p>TEL | 000-000-0000</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2024 PGO건강기술. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html> 
