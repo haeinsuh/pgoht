@@ -118,8 +118,9 @@ body {
     display: block;
 }
 
-.services-dropdown li {
-    list-style: none;
+.nav-menu li.active .services-dropdown {
+    display: block;
+    pointer-events: auto !important;
 }
 
 .services-dropdown a {
@@ -1946,23 +1947,28 @@ body {
         padding: 6rem 1rem 2rem;
         min-height: 300px;
         margin-top: 60px;
+        align-items: center !important;
+        text-align: center !important;
+        background-size: auto 100% !important;
     }
 
     .hero h1 {
-        font-size: 1.8rem;
-        padding: 0 1rem;
-        text-align: center;
-    }
-
-    .hero h1::after {
-        content: " 더 똑똑하게, 더 빠르게";
-        display: block;
-        margin-top: 0.5rem;
+        font-size: 2rem;
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-bottom: 1.5rem !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
 
     .hero p {
         font-size: 0.9rem;
         line-height: 1.6;
+        text-align: center !important;
+        padding: 0 !important;
+        padding-left: 0 !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
 
     .ceo-card,
@@ -2209,7 +2215,8 @@ body {
     .detail-hero h1 {
         font-size: 1.8rem;
         padding: 0 1rem;
-        text-align: center;
+        text-align: center !important;
+        padding-left: 0 !important;
     }
 
     .detail-hero h1::after {
@@ -2316,13 +2323,16 @@ body {
     .detail2-hero h1 {
         font-size: 1.8rem;
         padding: 0 1rem;
-        text-align: center;
+        text-align: center !important;
+        padding-left: 0 !important;
     }
 
     .detail2-hero p {
         font-size: 0.9rem;
         line-height: 1.6;
-        text-align: center;
+        text-align: center !important;
+        padding: 0 !important;
+        padding-left: 0 !important;
     }
 
     .detail2-content {
@@ -2458,7 +2468,8 @@ body {
     .detail3-hero h1 {
         font-size: 1.8rem;
         padding: 0 1rem;
-        text-align: center;
+        text-align: center !important;
+        padding-left: 0 !important;
     }
 
     .detail3-content {
